@@ -10,6 +10,8 @@ import kotlin.math.*
 class FunctionTest {
     private val testCalc: Calculator = Calculator()
 
+        //TODO("параметризовать тесты при джюнит5")
+
     @Test
     @DisplayName("test in zero point")
     fun testSecantAtZero(){
