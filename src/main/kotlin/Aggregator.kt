@@ -1,5 +1,7 @@
 import kotlin.math.*
 import function.Calculator
+import models.Captives
+import models.Vogon
 import sorting.CountingSort
 
 fun main(args: Array<String>){
@@ -25,4 +27,15 @@ fun main(args: Array<String>){
     for(elem in sortedArray)
         print("$elem ")
     println()
+    println()
+
+    /*Проверка доменной модели*/
+    val newVogon = Vogon("Djeltz", "Prostetnic")
+    val newCaptives = Captives(true)
+
+    println("~~~~~~DOM~~~~~~")
+    newVogon.pamperVogonHimself(newCaptives)
+    newVogon.smile()
+    newVogon.checkVogonsCondition()
+
 }
