@@ -35,14 +35,21 @@ class FunctionTest {
     }
 
     @Test
-    @DisplayName("jackal")
-    fun testNearValue(){
+    @DisplayName("test near values positive")
+    fun testNearValuesPositive(){
         val correctAnswer = 1/cos(0.05)
         val testedAnswer = testCalc.secant(0.05)
         assertThat(testedAnswer).isCloseTo(correctAnswer, offset(0.001))
         //assertEquals(testedAnswer, correctAnswer, 0.001)
     }
 
+    @Test
+    @DisplayName("test near values negative")
+    fun testNearValuesNegative(){
+        val correctAnswer = 1/cos(-0.05)
+        val testedAnswer = testCalc.secant(-0.05)
+        assertThat(testedAnswer).isCloseTo(correctAnswer, offset(0.001))
+    }
 
     @Test
     @DisplayName("test that absolute amount is big")
